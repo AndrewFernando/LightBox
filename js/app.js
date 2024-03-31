@@ -35,6 +35,10 @@ cerrar.addEventListener('click',(e)=>{
 buttons.addEventListener('click', (event) => {
     const buttonIndex = [...buttons.children].indexOf(event.target);
     if (buttonIndex !== -1) {
-        window.location.href = `index${buttonIndex + 1}.html`;
+        if (buttonIndex === 0) {
+            window.location.href = `index.html`;
+        } else {
+            window.location.href = `index${buttonIndex}.html`;
+        }
     }
 });
